@@ -20,6 +20,13 @@
 
 На данный момент было реализовано распознавание образов с помозщью открытых моделей. На вход подаётся изображение (в случае кейса - кадр с подключенной камеры).
 
+```python
+# Set custom configuration parameters for hat_model
+base_model.overrides['classes'] = [0] # Only detect class 0 (hard hat)
+base_model.overrides['conf'] = 0.25 # NMS confidence threshold
+base_model.overrides['iou'] = 0.45 # NMS IoU threshold
+```
+
 <h1>Что дальше?</h1>
 
 Дальше - больше! Больше интерактивности, больше функционала, больше бессонных ночей в работе над проектом.
